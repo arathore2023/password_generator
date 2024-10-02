@@ -23,12 +23,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd counter # Navigate to the counter directory
+          cd password # Navigate to the password directory
           npm install
 
       - name: Build the project
         run: |
-          cd counter # Navigate to the counter directory
+          cd password # Navigate to the counter directory
           npm run build
           
       - name: Log in to Docker Hub
@@ -39,9 +39,9 @@ jobs:
 
       - name: Build Docker image
         run: |
-          cd counter
-          docker build -t arathore240/counter-app:latest .
+          cd password
+          docker build -t arathore240/password-app:latest .
 
       - name: Push Docker image
         run: |
-          docker push arathore240/counter-app:latest
+          docker push arathore240/password-app:latest
